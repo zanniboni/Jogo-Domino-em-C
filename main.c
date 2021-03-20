@@ -50,7 +50,10 @@ int popularJogadores(int jogador){
 			jogador2[j].lado1 = pecas[x + 7].lado1;
 			jogador2[j].lado2 = pecas[x + 7].lado2;
 		
-			printf("Jogador 1: (%d,%d) - Jogador 2: (%d, %d)\n", jogador1[j].lado1, jogador1[j].lado2, jogador2[j].lado1, jogador2[j].lado2);
+			printf("\nJogador 1: (%d,%d)\n", jogador1[j].lado1, jogador1[j].lado2);
+			desenharPecas(jogador1[j].lado1, jogador1[j].lado2);
+			printf("\nJogador 2: (%d, %d)\n ",jogador2[j].lado1, jogador2[j].lado2);
+			desenharPecas(jogador2[j].lado1, jogador2[j].lado2);
 			x++;
 			j++;
 
@@ -139,7 +142,6 @@ void embaralharVetor(peca *vet, int vetSize)
 		peca temp = vet[i];
 		vet[i] = vet[r];
 		vet[r] = temp;
-		printf("(%d, %d)", vet[i].lado1, vet[i].lado2);
 	}
 }
 
